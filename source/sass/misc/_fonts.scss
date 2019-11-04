@@ -1,0 +1,6 @@
+// Подключаем шрифт Montserrat
+@include font-face("Montserrat", "Regular");
+@include font-face("Montserrat", "Medium", $fontWeightMedium);
+@include font-face("Montserrat", "SemiBold", $fontWeightSemiBold);
+@include font-face("Montserrat", "Bold", $fontWeightBold);
+@include font-face("Montserrat", "Black", $fontWeightBlack);

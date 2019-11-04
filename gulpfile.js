@@ -103,7 +103,7 @@ exports.webp = function () {
     .pipe(webp({
       quality: 90
     }))
-    .pipe(dest(`source/img`));
+    .pipe(dest(`build/img`));
 };
 
 // Удаление файлов в папке build перед копированием
