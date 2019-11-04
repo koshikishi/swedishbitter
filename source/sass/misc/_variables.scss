@@ -1,6 +1,59 @@
+// Задаём цвета сайта
+$colorWhite: #ffffff;
+$colorBlack: #000000;
+
+$colorPrimaryLight: #a4c58c;
+$colorPrimaryDark: #7eb252;
+
+$colorText: #303030;
+$colorTextAlt: #9a9a9a;
+$colorTextLabel: #a8c48c;
+$colorTextTab: #c3c3c3;
+
+$colorLineInput: #abc490;
+
+$colorBackground: #f6f9f3;
+$colorBackgroundHero: #464a64;
+$colorBackgroundMarker: #a5c98a;
+
 // Задаём характеристики шрифта и текста
 $fontWeightNormal: 400;
 $fontWeightMedium: 500;
 $fontWeightSemiBold: 600;
 $fontWeightBold: 700;
 $fontWeightBlack: 900;
+
+$fontSizeTextSmall: 14px;
+$fontSizeText: 16px;
+$fontSizeTextLarge: 18px;
+
+$fontSizeTitleMobile: 24px;
+$fontSizeTitleTablet: 30px;
+$fontSizeTitleDesktop: 40px;
+$fontSizeTitleTiny: 10px;
+$fontSizeTitleSmall: 12px;
+$fontSizeTitleMedium: 20px;
+$fontSizeTitleHeroTablet: 50px;
+$fontSizeTitleHeroDesktop: 60px;
+
+$fontSizeBackgroundMobile: 130px;
+$fontSizeBackgroundTablet: 110px;
+$fontSizeBackgroundDesktop: 150px;
+
+$lineHeightNormal: 1.2;
+
+$lineHeightTextSmall: 18px;
+$lineHeightText: 22px;
+$lineHeightTextLarge: 24px;
+$lineHeightTextHuge: 36px;
+
+$lineHeightTitleMobile: 30px;
+$lineHeightTitleTablet: 40px;
+$lineHeightTitleDesktop: 50px;
+$lineHeightTitleSmall: 20px;
+$lineHeightTitleMedium: 26px;
+
+$fontFamilyText: "Montserrat", "Arial", sans-serif;
+
+$letterSpacingSmall: 0.03em;
+$letterSpacing: 0.05em;
