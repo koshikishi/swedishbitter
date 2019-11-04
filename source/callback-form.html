@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body>
+  <body class="page">
+    <header class="header page__header">
+      <a class="logo" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/logo-mobile.webp" type="image/webp">
+          <source srcset="img/logo-desktop.png" media="(min-width: 768px)">
+          <source srcset="img/logo-mobile.png">
+          <img src="img/logo-desktop.png" alt="Логотип сайта «Шведской горечи»" width="198" height="29">
+        </picture>
+      </a>
+      <p class="header__text">Доставка по всей России</p>
+      <p class="phone header__phone">
+        <a href="tel:+88000000000">8 800 000-00-00</a>
+        <small>Звонок бесплатный</small>
+      </p>
+    </header>
   </body>
 </html>
