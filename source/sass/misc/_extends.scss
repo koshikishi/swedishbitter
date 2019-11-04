@@ -1,3 +1,23 @@
+%container-narrow {
+  box-sizing: border-box;
+  min-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 11px;
+  padding-left: 11px;
+
+  @media (min-width: 768px) {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 %list-reset {
   margin-top: 0;
   margin-bottom: 0;

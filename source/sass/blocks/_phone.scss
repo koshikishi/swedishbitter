@@ -1,0 +1,43 @@
+.phone {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: $lineHeightNormal;
+  text-align: right;
+
+  @media (min-width: 768px) {
+    padding-left: 27px;
+    background: url("../img/phone_icon.svg") left 5px no-repeat;
+  }
+
+  a {
+    font-weight: $fontWeightMedium;
+    line-height: $lineHeightNormal;
+    color: inherit;
+    transition: opacity 0.2s;
+
+    @media (min-width: 768px) {
+      font-size: $fontSizeTitleMedium;
+    }
+
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  small {
+    display: block;
+    font-size: $fontSizeTitleSmall;
+    line-height: $lineHeightTextSmall;
+    color: $colorTextAlt;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+}
