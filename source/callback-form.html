@@ -9,7 +9,7 @@
     <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page">
+  <body class="page page--inner">
     <header class="header">
       <a class="logo header__logo" href="index.html">
         <picture>
@@ -29,22 +29,20 @@
     <main>
       <h1 class="visually-hidden">Обратный звонок с сайта</h1>
       <form class="callback-form" action="#" method="post">
-        <div class="callback-form__inner">
-          <div class="callback-form__group">
-            <p class="callback-form__title">Узнайте подробнее о бальзаме</p>
-            <div class="callback-form__field">
-              <input type="text" name="name" id="name">
-              <label for="name">Имя</label>
-            </div>
-            <div class="callback-form__field">
-              <input type="tel" name="phone" id="phone">
-              <label for="phone">Телефон</label>
-            </div>
+        <div class="callback-form__group">
+          <p class="callback-form__title">Узнайте подробнее о&nbsp;бальзаме</p>
+          <div class="callback-form__field">
+            <label class="visually-hidden" for="name">Имя</label>
+            <input type="text" name="name" id="name" placeholder="Имя" required>
           </div>
-          <button class="button" type="submit">
-            <span>Узнать</span>
-          </button>
+          <div class="callback-form__field">
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+          </div>
         </div>
+        <button class="button" type="submit">
+          <span>Узнать</span>
+        </button>
       </form>
     </main>
   </body>

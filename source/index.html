@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Swedish Bitter — Сбор трав «Шведская горечь»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/modernizr.min.js"></script>
     <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font" type="font/woff2" crossorigin>
@@ -32,7 +33,7 @@
         <div class="hero__inner">
           <div class="hero__content">
             <h1 class="hero__title">
-              Сбор трав<br>
+              <small>Сбор трав</small>
               Шведская горечь
             </h1>
             <p class="hero__text">Не имеет аналогов в мире по оздоровительной силе и широте лечебных свойств</p>
@@ -44,30 +45,30 @@
             <source srcset="img/hero_image-mobile.png">
             <img src="img/hero_image-desktop.png" alt="Упаковка сбора трав «Шведская горечь»" width="298" height="648">
           </picture>
-          <form class="callback-form" action="#" method="post">
-            <div class="callback-form__inner">
+          <div class="hero__callback-form">
+            <form class="callback-form" action="#" method="post">
               <div class="callback-form__group">
                 <button class="callback-form__close" type="button">
                   <span class="visually-hidden">Скрыть форму</span>
                 </button>
-                <p class="callback-form__title">Узнайте подробнее о бальзаме</p>
+                <p class="callback-form__title">Узнайте подробнее о&nbsp;бальзаме</p>
                 <div class="callback-form__field">
-                  <input type="text" name="name" id="name">
-                  <label for="name">Имя</label>
+                  <label class="visually-hidden" for="name">Имя</label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required>
                 </div>
                 <div class="callback-form__field">
-                  <input type="tel" name="phone" id="phone">
-                  <label for="phone">Телефон</label>
+                  <label class="visually-hidden" for="phone">Телефон</label>
+                  <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
                 </div>
               </div>
-              <button class="button button--small" type="submit">
+              <button class="button button--small callback-form__button" type="submit">
                 <span>Узнать</span>
               </button>
-              <a class="button" href="callback-form.html">
-                <span>Узнать больше</span>
-              </a>
-            </div>
-          </form>
+            </form>
+            <a class="button button--small hero__button" href="callback-form.html">
+              <span>Узнать больше</span>
+            </a>
+          </div>
         </div>
       </section>
       <section class="features page__features">

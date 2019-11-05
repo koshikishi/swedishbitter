@@ -1,0 +1,67 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 70px;
+  padding: 13px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleSmall;
+  line-height: $lineHeightText;
+  vertical-align: middle;
+  text-align: center;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: $colorPrimaryDark;
+  border: none;
+  box-shadow: none;
+  transition-duration: 0.5s;
+  transition-property: box-shadow, transform;
+  cursor: pointer;
+
+  @at-root button.button,
+  &--small {
+    min-height: 60px;
+  }
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextSmall;
+
+    &--small {
+      width: 250px;
+    }
+
+    span {
+      position: relative;
+      padding-right: 51px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 6px;
+        right: 0;
+        width: 31px;
+        height: 9px;
+        background: url("../img/button_arrow.svg") no-repeat;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 3px 3px 10px rgba($colorBlack, 0.3);
+    transform: translate(-3px, -3px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: none;
+    transition-duration: 0.2s;
+  }
+}
