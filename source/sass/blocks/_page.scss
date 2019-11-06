@@ -9,3 +9,11 @@
     font-size: $fontSizeText;
   }
 }
+
+.page__hero {
+  margin-bottom: 56px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 79px;
+  }
+}
