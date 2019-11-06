@@ -1,3 +1,10 @@
+%list-reset {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
 %container-narrow {
   box-sizing: border-box;
   min-width: 320px;
@@ -26,9 +33,24 @@
   margin-left: auto;
 }
 
-%list-reset {
+%title {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleMobile;
+  line-height: $lineHeightTitleMobile;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTitleTablet;
+    line-height: $lineHeightTitleTablet;
+  }
+
+  @media (max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: $fontSizeTitleDesktop;
+    line-height: $lineHeightTitleDesktop;
+  }
 }
