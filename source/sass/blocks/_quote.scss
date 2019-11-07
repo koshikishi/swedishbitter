@@ -1,0 +1,74 @@
+.quote {
+  @extend %container-narrow;
+}
+
+.quote__inner {
+  box-sizing: border-box;
+  max-width: 470px;
+  margin: 0 auto;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    max-width: 770px;
+    padding: 47px 65px 53px 45px;
+    border: 0 solid $colorPrimaryLight;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 52px 0 55px;
+  }
+}
+
+.quote__text {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-weight: $fontWeightBold;
+
+  @media (min-width: 768px) {
+    margin-bottom: 32px;
+    font-size: $fontSizeTextLarge;
+    line-height: $lineHeightTextHuge;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 37px;
+    font-size: $fontSizeTitleMobile;
+    line-height: $lineHeightTitleTablet;
+  }
+}
+
+.quote__author {
+  font-style: normal;
+  line-height: $lineHeightTextSmall;
+
+  @media (max-width: 767px) {
+    display: block;
+    width: 164px;
+    margin-right: auto;
+    margin-left: auto;
+
+    small {
+      display: block;
+      margin-top: 13px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-left: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: $fontSizeTextLarge;
+  }
+
+  small {
+    font-size: $fontSizeTitleSmall;
+    color: $colorTextAlt;
+
+    @media (min-width: 1200px) {
+      font-size: $fontSizeText;
+    }
+  }
+}
