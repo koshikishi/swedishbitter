@@ -75,3 +75,13 @@
     }
   }
 }
+
+.page__quote {
+  @media (max-width: 767px) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 186px;
+  }
+}
