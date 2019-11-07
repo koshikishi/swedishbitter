@@ -1,0 +1,92 @@
+.subscribe {
+  @media (min-width: 768px) {
+    width: 281px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 371px;
+  }
+}
+
+.subscribe__group {
+  @media (max-width: 767px) {
+    padding: 27px 11px 34px;
+  }
+}
+
+.subscribe__title {
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightText;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 42px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 24px;
+  }
+}
+
+.subscribe__field {
+  position: relative;
+
+  @media (min-width: 768px) {
+    margin-bottom: 44px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 34px;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0;
+    font: inherit;
+    font-size: $fontSizeTextSmall;
+    line-height: $lineHeightNormal;
+    color: $colorTextLabel;
+    background-color: transparent;
+    border: 0 solid rgba($colorLineInput, 0.6);
+    border-bottom-width: 1px;
+    transition: border-color 0.2s;
+
+    @media (min-width: 768px) {
+      padding-right: 2px;
+      padding-left: 2px;
+    }
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+
+    &:hover,
+    &:not(:placeholder-shown) {
+      border-color: $colorLineInput;
+    }
+
+    &:focus {
+      border-color: $colorLineInput;
+      outline: none;
+
+      &::placeholder {
+        opacity: 0.6;
+      }
+    }
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}

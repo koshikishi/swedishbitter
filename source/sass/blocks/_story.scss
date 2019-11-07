@@ -1,0 +1,153 @@
+.story {
+  @extend %container-wide;
+
+  @media (min-width: 1200px) {
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.story__title-wrapper {
+  @extend %container-narrow;
+  padding-top: 54px;
+  padding-bottom: 16px;
+
+  @media (min-width: 768px) {
+    padding-top: 123px;
+    padding-bottom: 33px;
+  }
+
+  @media (max-width: 1199px) {
+    background-color: $colorBackground;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 88px;
+    padding-bottom: 42px;
+  }
+}
+
+.story__title {
+  @extend %title;
+  width: 298px;
+  margin-right: auto;
+
+  @media (max-width: 767px) {
+    font-size: $fontSizeTitleMedium;
+    line-height: $lineHeightTitleMedium;
+
+    span {
+      display: block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 538px;
+  }
+
+  @media (max-width: 1199px) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1200px) {
+    width: 600px;
+  }
+}
+
+.story__container {
+  background-color: $colorBackground;
+
+  @media (max-width: 767px) {
+    padding-bottom: 22px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-bottom: 92px;
+  }
+}
+
+.story__text-wrapper {
+  @extend %container-narrow;
+}
+
+.story__text {
+  margin-right: auto;
+
+  @media (max-width: 767px) {
+    max-width: 670px;
+  }
+
+  @media (min-width: 768px) {
+    width: 724px;
+  }
+
+  @media (max-width: 1199px) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 1200px) {
+    position: relative;
+    z-index: 1;
+    width: 670px;
+    margin-bottom: 44px;
+    padding-top: 53px;
+    padding-right: 30px;
+    padding-bottom: 60px;
+    background-color: $colorBackground;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+.story__figure {
+  width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 768px) {
+    width: 724px;
+
+    @media (max-width: 1199px) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin-top: -25px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 712px;
+  }
+}
+
+.story__image {
+  img {
+    display: block;
+    width: 320px;
+
+    @media (min-width: 768px) {
+      width: 352px;
+    }
+
+    @media (min-width: 1200px) {
+      position: absolute;
+      top: 0;
+      left: calc(50% + 85px);
+      width: 774px;
+    }
+  }
+}
+
+.story__subscribe {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 79px;
+    margin-left: 43px;
+  }
+}
