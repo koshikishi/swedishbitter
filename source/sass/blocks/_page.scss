@@ -85,3 +85,15 @@
     margin-bottom: 186px;
   }
 }
+
+.page__contents {
+  margin-bottom: 69px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 92px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 190px;
+  }
+}

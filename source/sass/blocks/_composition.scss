@@ -1,0 +1,224 @@
+.composition {
+  @extend %container-narrow;
+
+  @media (max-width: 1199px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.composition__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  counter-reset: number;
+
+  @media (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+
+.composition__heading {
+  @extend %container-narrow;
+  width: 100%;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 43px;
+  }
+
+  @media (min-width: 1200px) {
+    width: 518px;
+    margin-right: 0;
+    margin-bottom: 73px;
+    margin-left: 52px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.composition__title {
+  @extend %title;
+  margin-bottom: 22px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 39px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 47px;
+    padding-left: 19px;
+
+    span {
+      display: block;
+      margin-left: -23px;
+    }
+  }
+}
+
+.composition__list {
+  @extend %list-reset;
+
+  @media (max-width: 1199px) {
+    max-width: 534px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.composition__item {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 39px;
+  line-height: $lineHeightText;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 17px;
+    width: 7px;
+    height: 7px;
+    background-color: $colorPrimaryLight;
+    border-radius: 50%;
+  }
+
+  @media (max-width: 767px) {
+    &:first-child {
+      padding-right: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+    padding-left: 40px;
+
+    @media (max-width: 1199px) {
+      padding-right: 15px;
+    }
+  }
+}
+
+.composition__card {
+  margin-bottom: 10px;
+
+  @media (max-width: 767px) {
+    margin-right: 11px;
+    margin-left: 11px;
+
+    @media (min-width: 629px) {
+      &:nth-of-type(odd) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 38px;
+
+    @media (max-width: 1199px) {
+      margin-right: 18px;
+      margin-left: 18px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 30px;
+  }
+}
+
+.composition__caption {
+  box-sizing: border-box;
+  width: 320px;
+
+  @media (min-width: 629px) and (max-width: 767px) {
+    width: 309px;
+  }
+
+  @media (min-width: 768px) {
+    width: 345px;
+
+    @media (max-width: 1199px) {
+      margin-right: 6px;
+      margin-left: 17px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 870px;
+    padding: 19px 19px 19px 18px;
+  }
+}
+
+.composition__caption-inner {
+  @media (min-width: 768px) {
+    border: 1px solid rgba($colorPrimaryLight, 0.6);
+    border-radius: 2px;
+  }
+}
+
+.composition__caption-text {
+  padding: 32px 35px 46px;
+
+  @media (min-width: 629px) {
+    padding-top: 72px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 79px 28px 71px 33px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 55px 75px 33px 58px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+
+    @media (max-width: 1199px) {
+      &:last-child {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 14px;
+      padding-left: 22px;
+      line-height: $lineHeightText;
+
+      &:first-child {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 7px;
+          left: 0;
+          width: 7px;
+          height: 7px;
+          background-color: $colorPrimaryLight;
+          border-radius: 50%;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.composition__button {
+  @media (min-width: 1200px) {
+    margin-left: auto;
+  }
+}

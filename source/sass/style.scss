@@ -36,3 +36,6 @@
 
 // Подключаем стили блока содержания
 @import "blocks/contents";
+
+// Подключаем стили блока состава
+@import "blocks/composition", "blocks/card";

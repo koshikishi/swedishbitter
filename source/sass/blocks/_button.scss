@@ -24,7 +24,8 @@
   cursor: pointer;
 
   @at-root button.button,
-  &--small {
+  &--small,
+  &--medium {
     min-height: 60px;
   }
 
@@ -57,6 +58,12 @@
         background: url("../img/button_arrow.svg") no-repeat;
         opacity: 0.5;
       }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--medium {
+      width: 350px;
     }
   }
 
