@@ -97,3 +97,15 @@
     margin-bottom: 190px;
   }
 }
+
+.page__composition {
+  margin-bottom: 54px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 103px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 158px;
+  }
+}
