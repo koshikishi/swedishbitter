@@ -91,6 +91,28 @@
       }
     }
   }
+
+  @supports (display: grid) {
+    @media (max-width: 1199px) {
+      justify-self: center;
+
+      @media (min-width: 629px) {
+        justify-self: start;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1080px) {
+      &:nth-of-type(even) {
+        justify-self: end;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      &:nth-of-type(-n+3) {
+        align-self: end;
+      }
+    }
+  }
 }
 
 .card__title {

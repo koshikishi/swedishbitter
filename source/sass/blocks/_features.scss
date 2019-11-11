@@ -7,6 +7,24 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 212px);
+    gap: 38px 80px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, 252px);
+      gap: 74px 79px;
+      padding-left: 3px;
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(2, 281px) repeat(2, 252px);
+      column-gap: 18px;
+      padding-left: 9px;
+    }
+  }
 }
 
 .features__item {
@@ -46,7 +64,17 @@
     &:nth-child(4n) {
       margin-right: auto;
       margin-left: 0;
+
+      @supports (display: grid) {
+        margin-right: 0;
+      }
     }
+  }
+
+  @supports (display: grid) {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
   }
 }
 

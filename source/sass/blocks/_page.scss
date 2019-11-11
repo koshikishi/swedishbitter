@@ -28,6 +28,18 @@
   @media (min-width: 1200px) {
     margin-bottom: 121px;
   }
+
+  @supports (display: grid) {
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 136px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 195px;
+    }
+  }
 }
 
 .page__ailments {
@@ -107,6 +119,16 @@
 
   @media (min-width: 1200px) {
     margin-bottom: 158px;
+  }
+
+  @supports (display: grid) {
+    @media (min-width: 768px) {
+      margin-bottom: 141px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 168px;
+    }
   }
 }
 

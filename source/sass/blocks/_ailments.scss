@@ -169,7 +169,9 @@
     }
 
     @media (min-width: 768px) {
+      display: flex;
       flex-grow: 1;
+      align-items: center;
       width: 299px;
       padding-top: 18px;
       padding-bottom: 21px;
@@ -190,8 +192,6 @@
       }
 
       &:nth-child(n+8) {
-        display: flex;
-        align-items: center;
         padding-left: 79px;
 
         &::before {
