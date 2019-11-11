@@ -1,0 +1,134 @@
+.making {
+  @extend %container-wide;
+
+  @media (min-width: 1200px) {
+    position: relative;
+  }
+}
+
+.making__inner {
+  @extend %container-narrow;
+
+  @media (max-width: 767px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 51px;
+  }
+}
+
+.making__content-wrapper {
+  box-sizing: border-box;
+  margin-left: auto;
+
+  @media (max-width: 767px) {
+    max-width: 530px;
+  }
+
+  @media (min-width: 768px) {
+    width: 646px;
+    padding-right: 4px;
+  }
+
+  @media (max-width: 1199px) {
+    margin-right: auto;
+  }
+
+  @media (min-width: 1200px) {
+    position: relative;
+    z-index: 1;
+    width: 681px;
+    padding: 19px 20px 18px 19px;
+    background-color: $colorWhite;
+  }
+}
+
+.making__content {
+  @media (min-width: 768px) {
+    padding: 58px 35px 70px 70px;
+    border: 1px solid rgba($colorPrimaryLight, 0.6);
+    border-radius: 2px;
+  }
+}
+
+.making__title {
+  @extend %title;
+  margin-bottom: 21px;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 48px;
+    font-size: $fontSizeTitleDesktop;
+    line-height: $lineHeightTitleDesktop;
+    text-align: left;
+  }
+}
+
+.making__text {
+  margin-bottom: 21px;
+
+  @media (max-width: 767px) {
+    padding-right: 11px;
+    padding-left: 11px;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 14px;
+    line-height: $lineHeightText;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.making__feature {
+  margin-top: 0;
+  margin-bottom: 35px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleSmall;
+  line-height: $lineHeightTitleSmall;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: 767px) {
+    padding-right: 11px;
+    padding-left: 11px;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 61px;
+    font-size: $fontSizeTextSmall;
+  }
+}
+
+.making__image {
+  @media (max-width: 1199px) {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 1074px;
+
+    @media (min-width: 1200px) {
+      position: absolute;
+      top: 0;
+      left: calc(50% - 860px);
+    }
+  }
+}
