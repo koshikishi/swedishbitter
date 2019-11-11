@@ -30,6 +30,12 @@
     }
   }
 
+  &--footer {
+    a {
+      font-weight: $fontWeightSemiBold;
+    }
+  }
+
   small {
     display: block;
     font-size: $fontSizeTitleSmall;
