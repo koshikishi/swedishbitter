@@ -28,6 +28,7 @@
 
     &--shown {
       display: flex;
+      animation: 1s callback-form-show;
     }
 
     .page--inner & {
