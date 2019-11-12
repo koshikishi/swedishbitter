@@ -90,3 +90,28 @@ var addAilmentLinksClickHandler = function (link, marker) {
 for (var i = 0; i < ailmentLinks.length; i++) {
   addAilmentLinksClickHandler(ailmentLinks[i], ailmentMarkers[i]);
 }
+
+// Оживление блока отзывов
+var testimonialBtns = document.querySelectorAll('.testimonials__button');
+var testimonialTabs = document.querySelectorAll('.testimonials__tab');
+
+testimonialBtns[0].parentElement.classList.add('testimonials__button-wrapper--active');
+testimonialTabs[0].classList.add('testimonials__tab--active');
+
+var addTestimonialBtnsClickHandler = function (btn, tab) {
+  btn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (!btn.parentElement.classList.contains('testimonials__button-wrapper--active')) {
+      document.querySelector('.testimonials__button-wrapper--active').classList.remove('testimonials__button-wrapper--active');
+      document.querySelector('.testimonials__tab--active').classList.remove('testimonials__tab--active');
+
+      btn.parentElement.classList.add('testimonials__button-wrapper--active');
+      tab.classList.add('testimonials__tab--active');
+    }
+  });
+};
+
+for (var j = 0; j < testimonialBtns.length; j++) {
+  addTestimonialBtnsClickHandler(testimonialBtns[j], testimonialTabs[j]);
+}
