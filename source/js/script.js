@@ -69,3 +69,24 @@ function callbackFormClose() {
     }
   })();
 }
+
+// Оживление блока заболеваний
+var ailmentLinks = document.querySelectorAll('.ailments__item a');
+var ailmentsFigure = document.querySelector('.ailments__figure');
+var ailmentMarkers = ailmentsFigure.querySelectorAll('.ailments__image-marker');
+
+var addAilmentLinksClickHandler = function (link, marker) {
+  link.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    link.parentElement.classList.toggle('ailments__item--active');
+    marker.classList.toggle('ailments__image-marker--active');
+
+    if (window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches) {
+      ailmentsFigure.scrollIntoView({behavior: 'smooth'});
+    }
+  });
+};
+
+for (var i = 0; i < ailmentLinks.length; i++) {
+  addAilmentLinksClickHandler(ailmentLinks[i], ailmentMarkers[i]);
+}
