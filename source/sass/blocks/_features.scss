@@ -80,6 +80,7 @@
 
 .features__item-title {
   position: relative;
+  max-width: 100%;
   margin-top: 0;
   margin-bottom: 24px;
   padding-bottom: 7px;
@@ -113,6 +114,7 @@
 }
 
 .features__item-text {
+  width: 100%;
   margin-top: 0;
   margin-bottom: 0;
   font-size: $fontSizeText;
