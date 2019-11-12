@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Заказать обратный звонок — Swedish Bitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body class="page page--inner">
+    <header class="header">
+      <a class="logo header__logo" href="index.html">
+        <picture>
+          <source srcset="img/logo-desktop.webp" media="(min-width: 768px)" type="image/webp">
+          <source srcset="img/logo-mobile.webp" type="image/webp">
+          <source srcset="img/logo-desktop.png" media="(min-width: 768px)">
+          <source srcset="img/logo-mobile.png">
+          <img src="img/logo-desktop.png" alt="Логотип сайта «Шведской горечи»" width="198" height="29">
+        </picture>
+      </a>
+      <p class="header__text">Доставка по всей России</p>
+      <p class="phone">
+        <a href="tel:+88000000000">8 800 000-00-00</a>
+        <small>Звонок бесплатный</small>
+      </p>
+    </header>
+    <main>
+      <h1 class="visually-hidden">Обратный звонок с сайта</h1>
+      <form class="callback-form" action="#" method="post">
+        <div class="callback-form__group">
+          <p class="callback-form__title">Узнайте подробнее о&nbsp;бальзаме</p>
+          <div class="callback-form__field">
+            <label class="visually-hidden" for="name">Имя</label>
+            <input type="text" name="name" id="name" placeholder="Имя" required>
+          </div>
+          <div class="callback-form__field">
+            <label class="visually-hidden" for="phone">Телефон</label>
+            <input type="tel" name="phone" id="phone" placeholder="Телефон" required>
+          </div>
+        </div>
+        <button class="button" type="submit">
+          <span class="button__helper">
+            <span class="button__text">Узнать</span>
+          </span>
+        </button>
+      </form>
+    </main>
+  </body>
+</html>

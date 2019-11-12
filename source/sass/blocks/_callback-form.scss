@@ -1,0 +1,162 @@
+.callback-form {
+  @media (min-width: 768px) {
+    border: 1px solid rgba($colorPrimaryLight, 0.6);
+    border-radius: 2px;
+
+    .page--inner & {
+      width: 531px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+.callback-form__group {
+  display: flex;
+  box-sizing: border-box;
+  padding: 5px 11px 94px;
+
+  @media (max-width: 767px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+    background-color: $colorWhite;
+
+    &--shown {
+      display: flex;
+      animation: 1s callback-form-show;
+    }
+
+    .page--inner & {
+      position: static;
+      display: flex;
+      padding-top: 24px;
+      padding-bottom: 34px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 44px 50px 59px;
+  }
+}
+
+.callback-form__close {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 2px;
+  padding: 0;
+  background: url("../img/icon_arrow.svg") center no-repeat;
+  border: none;
+  transform: rotate(90deg);
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.callback-form__title {
+  width: 250px;
+  margin-top: 0;
+  margin-bottom: 22px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTextSmall;
+  line-height: $lineHeightText;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 31px;
+  }
+}
+
+.callback-form__field {
+  @media (max-width: 767px) {
+    align-self: stretch;
+    margin-bottom: 27px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+
+  input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0;
+    font: inherit;
+    font-size: $fontSizeTextSmall;
+    line-height: $lineHeightNormal;
+    color: $colorTextLabel;
+    background-color: transparent;
+    border: 0 solid rgba($colorLineInput, 0.6);
+    border-bottom-width: 1px;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: inherit;
+      opacity: 1;
+      transition: opacity 0.2s;
+    }
+
+    &:hover,
+    &:not(:placeholder-shown) {
+      border-color: $colorLineInput;
+    }
+
+    &:focus {
+      border-color: $colorLineInput;
+      outline: none;
+
+      &::placeholder {
+        opacity: 0.6;
+      }
+    }
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}
+
+.callback-form__button {
+  @media (max-width: 767px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+
+    &--shown {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 768px) {
+    margin-left: auto;
+  }
+}

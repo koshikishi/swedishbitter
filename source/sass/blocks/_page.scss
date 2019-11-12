@@ -1,0 +1,155 @@
+.page {
+  min-width: 320px;
+  margin: 0;
+  font: #{$fontSizeTextSmall}/#{$lineHeightTextLarge} $fontFamilyText;
+  color: $colorText;
+  background-color: $colorWhite;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeText;
+  }
+}
+
+.page__hero {
+  margin-bottom: 56px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 79px;
+  }
+}
+
+.page__features {
+  margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 121px;
+  }
+
+  @supports (display: grid) {
+    margin-bottom: 48px;
+
+    @media (min-width: 768px) {
+      margin-bottom: 136px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 195px;
+    }
+  }
+}
+
+.page__ailments {
+  margin-bottom: 54px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 143px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 180px;
+  }
+}
+
+.page__reasons {
+  @media (min-width: 1200px) {
+    margin-bottom: 181px;
+  }
+}
+
+.page__story {
+  margin-bottom: 53px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 101px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 6px;
+  }
+}
+
+.page__container {
+  @media (min-width: 1200px) {
+    padding-top: 194px;
+    background: top no-repeat;
+
+    .no-js &,
+    .no-webp & {
+      background-image: url("../img/page_bg-desktop.png");
+    }
+
+    .webp & {
+      background-image: url("../img/page_bg-desktop.webp");
+    }
+  }
+}
+
+.page__quote {
+  @media (max-width: 767px) {
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 186px;
+  }
+}
+
+.page__contents {
+  margin-bottom: 69px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 92px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 190px;
+  }
+}
+
+.page__composition {
+  margin-bottom: 54px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 103px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 158px;
+  }
+
+  @supports (display: grid) {
+    @media (min-width: 768px) {
+      margin-bottom: 141px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-bottom: 168px;
+    }
+  }
+}
+
+.page__testimonials {
+  margin-bottom: 55px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 64px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 200px;
+  }
+}
+
+.page__making {
+  @media (min-width: 768px) {
+    margin-bottom: 141px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 200px;
+  }
+}

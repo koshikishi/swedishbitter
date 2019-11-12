@@ -1,0 +1,233 @@
+.contents {
+  @extend %container-wide;
+}
+
+.contents__title-wrapper {
+  @extend %container-narrow;
+
+  @media (max-width: 767px) {
+    padding-top: 55px;
+    padding-bottom: 26px;
+  }
+
+  @media (max-width: 1199px) {
+    background-color: $colorBackground;
+
+    @media (min-width: 768px) {
+      padding-top: 93px;
+      padding-bottom: 39px;
+    }
+  }
+}
+
+.contents__title {
+  @extend %title;
+
+  @media (max-width: 767px) {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    span {
+      &:first-of-type {
+        display: block;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 520px;
+    margin-bottom: 102px;
+    padding-left: 22px;
+
+    span {
+      &:last-of-type {
+        margin-left: -22px;
+      }
+    }
+  }
+}
+
+.contents__inner {
+  padding-bottom: 70px;
+  background-color: $colorBackground;
+
+  @media (min-width: 768px) {
+    padding-bottom: 98px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-bottom: 30px;
+  }
+}
+
+.contents__list {
+  @extend %list-reset;
+  @extend %container-narrow;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  counter-reset: number;
+
+  @media (min-width: 768px) {
+    background-color: $colorWhite;
+    background-clip: content-box;
+
+    @media (max-width: 1199px) {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 1041px;
+    transform: translateY(-70px);
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 298px);
+    row-gap: 40px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(auto-fill, 224px);
+      gap: 13px;
+      padding: 13px;
+      background-clip: border-box;
+
+      @media (max-width: 1199px) {
+        max-width: 724px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(auto-fill, 312px);
+      gap: 19px;
+      width: 1012px;
+      padding: 19px;
+    }
+  }
+}
+
+.contents__item {
+  position: relative;
+  width: 298px;
+  margin-bottom: 40px;
+  padding-top: 150px;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleSmall;
+  line-height: $lineHeightTitleSmall;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  counter-increment: number;
+
+  &::before {
+    content: counter(number, decimal-leading-zero);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-weight: $fontWeightBlack;
+    font-size: $fontSizeBackgroundMobile;
+    line-height: $lineHeightNormal;
+    color: $colorWhite;
+    letter-spacing: $letterSpacing;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 50%;
+    width: 97px;
+    height: 85px;
+    background: center no-repeat;
+    transform: translateX(-50%);
+  }
+
+  @media (max-width: 767px) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    width: 222px;
+    margin: 13px 6.5px;
+    padding-top: 156px;
+    padding-bottom: 55px;
+    font-size: $fontSizeTitleTiny;
+    border: 1px solid rgba($colorPrimaryLight, 0.3);
+    border-radius: 2px;
+
+    @media (max-width: 1199px) {
+      line-height: $lineHeightNormal;
+    }
+
+    &::before {
+      top: 24px;
+      font-size: $fontSizeBackgroundTablet;
+      color: $colorBackground;
+    }
+
+    &::after {
+      top: 62px;
+      width: 72px;
+      height: 63px;
+      background-size: contain;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 0;
+    }
+
+    &--certificate {
+      &::after {
+        background-size: 61px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    width: 310px;
+    margin: 19px 9.5px;
+    padding-top: 215px;
+    padding-bottom: 75px;
+    font-size: $fontSizeTextSmall;
+
+    &::before {
+      top: 37px;
+      font-size: $fontSizeBackgroundDesktop;
+    }
+
+    &::after {
+      top: 86px;
+      width: 100px;
+      height: 88px;
+    }
+
+    &:nth-child(n+4) {
+      margin-top: 0;
+    }
+
+    &--certificate {
+      &::after {
+        background-size: 85px;
+      }
+    }
+  }
+
+  @each $item in herbs, instruction, certificate {
+    &--#{$item} {
+      &::after {
+        background-image: url("../img/contents_#{$item}.svg");
+      }
+    }
+  }
+
+  @supports (display: grid) {
+    margin: 0;
+  }
+}

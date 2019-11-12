@@ -8,7 +8,46 @@
 @import "misc/fonts";
 
 // Подключаем шаблонные и вспомогательные классы
-@import "misc/extends", "blocks/visually-hidden";
+@import "misc/extends", "misc/animations", "blocks/visually-hidden";
 
 // Подключаем основные стили
-@import "misc/base";
+@import "misc/base", "blocks/page", "blocks/button";
+
+// Подключаем стили шапки
+@import "blocks/header", "blocks/logo", "blocks/phone";
+
+// Подключаем стили hero-блока
+@import "blocks/hero", "blocks/callback-form";
+
+// Подключаем стили блока достижений
+@import "blocks/features";
+
+// Подключаем стили блока заболеваний
+@import "blocks/ailments";
+
+// Подключаем стили блока причин популярности
+@import "blocks/reasons";
+
+// Подключаем стили блока истории возникновения
+@import "blocks/story", "blocks/subscribe";
+
+// Подключаем стили блока цитаты
+@import "blocks/quote";
+
+// Подключаем стили блока содержания
+@import "blocks/contents";
+
+// Подключаем стили блока состава
+@import "blocks/composition", "blocks/card";
+
+// Подключаем стили блока отзывов
+@import "blocks/testimonials";
+
+// Подключаем стили блока изготовления
+@import "blocks/making";
+
+// Подключаем стили блока гарантий
+@import "blocks/warranty";
+
+// Подключаем стили подвала
+@import "blocks/footer";

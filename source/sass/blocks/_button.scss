@@ -1,0 +1,97 @@
+.button {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  font-weight: $fontWeightBold;
+  font-size: $fontSizeTitleSmall;
+  line-height: $lineHeightText;
+  vertical-align: middle;
+  text-align: center;
+  color: $colorWhite;
+  text-transform: uppercase;
+  letter-spacing: $letterSpacing;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  background: $colorPrimaryDark;
+  border: none;
+  box-shadow: none;
+  transition-duration: 0.5s;
+  transition-property: box-shadow, transform;
+  cursor: pointer;
+
+  @media (min-width: 768px) {
+    font-size: $fontSizeTextSmall;
+
+    &--small {
+      width: 250px;
+    }
+
+    &--large {
+      width: 500px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &--medium {
+      width: 350px;
+    }
+
+    &--wide {
+      width: 570px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    box-shadow: 3px 3px 10px rgba($colorBlack, 0.3);
+    transform: translate(-3px, -3px);
+  }
+
+  &:active {
+    box-shadow: none;
+    transform: none;
+    transition-duration: 0.2s;
+  }
+}
+
+// Workaround против бага с выравниванием элементов по высоте внутри флекс-контейнера с min-height в IE11
+.button__helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 70px;
+  padding: 13px;
+
+  button.button &,
+  .button--small &,
+  .button--medium & {
+    min-height: 60px;
+  }
+}
+
+.button__text {
+  @media (min-width: 768px) {
+    position: relative;
+    padding-right: 51px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: 31px;
+      height: 9px;
+      background: url("../img/button_arrow.svg") no-repeat;
+      opacity: 0.5;
+    }
+  }
+}
+
+.button__hidden {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}

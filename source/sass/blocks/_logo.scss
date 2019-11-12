@@ -1,0 +1,24 @@
+.logo {
+  width: 110px;
+  transition: opacity 0.2s;
+
+  @media (min-width: 768px) {
+    width: 198px;
+  }
+
+  &[href] {
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  img {
+    display: block;
+  }
+}
