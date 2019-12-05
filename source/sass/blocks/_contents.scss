@@ -127,13 +127,13 @@
     content: counter(number, decimal-leading-zero);
     position: absolute;
     top: 0;
-    left: 50%;
+    right: 50%;
     font-weight: $fontWeightBlack;
     font-size: $fontSizeBackgroundMobile;
     line-height: $lineHeightNormal;
     color: $colorWhite;
     letter-spacing: $letterSpacing;
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
 
   &::after {

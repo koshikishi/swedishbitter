@@ -162,14 +162,14 @@
   .js & {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
     opacity: 0;
     transition: opacity 0.2s;
 
     &--active {
       position: relative;
-      left: auto;
+      right: auto;
       z-index: 1;
       transform: none;
       opacity: 1;
