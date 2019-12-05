@@ -53,11 +53,11 @@ function callbackFormClose() {
 
   window.setTimeout(function () {
     callbackForm.classList.remove('callback-form__group--shown');
-    callbackForm.style.animationDirection = null;
+    callbackForm.removeAttribute('style');
   }, 1000);
 
   // Плавное появление кнопки открытия формы обратного звонка
-  callbackFormOpenBtn.style.display = null;
+  callbackFormOpenBtn.style.removeProperty('display');
 
   (function fadeIn() {
     var opacityValue = parseFloat(callbackFormOpenBtn.style.opacity);
