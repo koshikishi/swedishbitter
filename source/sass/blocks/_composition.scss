@@ -28,6 +28,7 @@
 
     @media (min-width: 629px) {
       grid-template-columns: 298px 309px;
+      column-gap: 0.8%;
     }
 
     @media (min-width: 768px) {
@@ -37,6 +38,7 @@
 
     @media (min-width: 1081px) {
       grid-template-columns: repeat(2, 332px) 345px;
+      column-gap: 2.5%;
     }
 
     @media (min-width: 1200px) {
