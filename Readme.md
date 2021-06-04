@@ -1,5 +1,16 @@
 # Swedish Bitter
-Адаптивный лендинг для полезного продукта
+Адаптивный лендинг для полезного продукта.
 
-## Сборка на GitHub Pages
-https://koshikishi.github.io/swedishbitter
+* 2 страницы (главная, страница формы), всплывающее окно формы
+* Написан на HTML5 + CSS3 + JS ES5
+* Адаптивная вёрстка для 320px, 768px, 1920px + резина
+* Использовались: флексы, гриды, оптимизированные, адаптивные изображения в формате WebP
+* Шрифты: Montserrat
+* Сторонние библиотеки: Modernizr (для проверки поддержки WebP)
+* Проверен на Chrome, Firefox, Safari, Opera, Edge, IE11
+* Валидная разметка по W3C
+* 99% Google PageSpeed
+
+Сборка на GitHub Pages: https://koshikishi.github.io/swedishbitter/
+
+Этот сайт сделан для портфолио.
